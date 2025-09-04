@@ -1,0 +1,14 @@
+<!-- the navbar partial is named with an underscore at the beginning - _navbar. 
+ This underscore is a common naming convention used to indicate that the file is a partial. 
+ It’s a helpful reminder that this piece of code is meant to be a reusable component, embedded within other templates, rather than a standalone page. -->
+
+ <nav>
+  <% if(user) { %>
+  <a href="/users/<%= user._id %>/applications">Your Apps</a>
+  <a href="/auth/sign-out">Sign Out</a>
+  <% } else { %>
+  <a href="/auth/sign-in">Sign In</a>
+  <a href="/auth/sign-up">Sign Up</a>
+  <% } %>
+</nav>
+
